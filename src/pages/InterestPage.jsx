@@ -1,27 +1,27 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import ButtonNext from '../components/ButtonNext';
-import RadioButton from '../components/RadioButton';
+import RadioButton from "../components/RadioButton";
 
-export default function AgePage() {
-
-    const [age, setAge] = useState("")
+export default function InterestPage() {
+    const [interest, setInterest] = useState("")
 
     function handleOnChange(e) {
-        setAge(e.target.value)
+        setInterest(e.target.value)
     }
 
-    const pageName = "age"
-    const currentValue = age
+    const pageName = "interest"
+    const currentValue = interest
 
     const pageData = [
-        { value: "a", label: "Younger than 25" },
-        { value: "b", label: "Between 25 and 50" },
-        { value: "c", label: "Over 50" },
+        { value: "a", label: "Fashion" },
+        { value: "b", label: "Tech" },
+        { value: "c", label: "Craft" },
     ]
 
     return (
         <div>
-            <h2>Age</h2>
+            <h2>Interest</h2>
             {/*radio buttons for answer options*/}
 
             {pageData.map((item, index) => {
@@ -31,10 +31,9 @@ export default function AgePage() {
                 />
             })}
 
-            <ButtonNext
-                to="/interest"
+            <ButtonNext to={"/relationship"}
                 currentValue={currentValue}
-                label="Move along to interest page"
+                label="Lets move on to your relationship"
             />
         </div>
     )

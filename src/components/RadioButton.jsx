@@ -1,8 +1,10 @@
 import React from 'react'
 
-export default function RadioButton({ name, value, onChange, currentValue, label }) {
+export default function RadioButton({
+    name, value, onChange, currentValue, label
+}) {
     return (
-        <div class="form-check">
+        <div className="form-check">
             <input
                 className="form-check-input"
                 type="radio"
