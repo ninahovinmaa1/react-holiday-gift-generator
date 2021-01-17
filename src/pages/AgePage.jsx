@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import ButtonNext from '../components/ButtonNext';
 import RadioButton from '../components/RadioButton';
+import { UserInputContext } from '../contexts/UserInputContext'
 
 export default function AgePage() {
     const { age, setAge } = useContext(UserInputContext)
