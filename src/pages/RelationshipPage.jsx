@@ -2,26 +2,25 @@ import React, { useContext } from 'react';
 import ButtonNext from '../components/ButtonNext';
 import RadioButton from "../components/RadioButton";
 
-export default function InterestPage() {
-
-    const { interest, setInterest } = useContext(UserInputContext)
+export default function RelationshipPage() {
+    const { relationship, setRelationship } = useContext(UserInputContext)
 
     function handleOnChange(e) {
-        setInterest(e.target.value)
+        setRelationship(e.target.value)
     }
 
-    const pageName = "interest"
-    const currentValue = interest
+    const pageName = "relationship"
+    const currentValue = relationship
 
     const pageData = [
-        { value: "a", label: "Fashion" },
-        { value: "b", label: "Tech" },
-        { value: "c", label: "Craft" },
+        { value: "a", label: "Parent" },
+        { value: "b", label: "Sibling" },
+        { value: "c", label: "Other" },
     ]
 
     return (
         <div>
-            <h2>Interest</h2>
+            <h2>Relationship</h2>
             {/*radio buttons for answer options*/}
 
             {pageData.map((item, index) => {
@@ -31,9 +30,9 @@ export default function InterestPage() {
                 />
             })}
 
-            <ButtonNext to="/relationship"
+            <ButtonNext to="/result"
                 currentValue={currentValue}
-                label="Lets move on to your relationship"
+                label="Let's see your result!"
             />
         </div>
     )

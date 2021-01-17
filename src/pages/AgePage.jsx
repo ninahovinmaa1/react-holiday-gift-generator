@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import ButtonNext from '../components/ButtonNext';
 import RadioButton from '../components/RadioButton';
 
 export default function AgePage() {
-
-    const [age, setAge] = useState("")
+    const { age, setAge } = useContext(UserInputContext)
 
     function handleOnChange(e) {
         setAge(e.target.value)
